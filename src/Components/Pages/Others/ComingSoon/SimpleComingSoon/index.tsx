@@ -12,7 +12,7 @@ export default function SimpleComingSoon() {
             <Container fluid className="p-0">
                 <div className="comingsoon">
                     <div className="comingsoon-inner text-center">
-                        <Link to={`${process.env.PUBLIC_URL}/dashboard/default`}>
+                        <Link to={`${process.env.PUBLIC_URL}/dashboard`}>
                             <Image className="img-fluid" src={dynamicImage(`logo/logo.png`)} alt="" />
                         </Link>
                         <H5>{WeAreComingSoon}</H5>

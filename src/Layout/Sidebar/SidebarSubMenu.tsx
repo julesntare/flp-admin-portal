@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../redux-toolkit/store";
-import { MenuListType, SidebarItemType } from "../../Types/LayoutTypes";
+import { MenuListType, SidebarMenuType } from "../../Types/LayoutTypes";
 import { LI, UL } from "../../AbstractElements";
 import { Href } from "../../Utils/Constants";
 import { setPinedMenu } from "../../redux-toolkit/reducers/LayoutReducer";
@@ -30,13 +30,13 @@ export default function SidebarSubMenu({
   const ActiveNavLinkUrl = (path?: string) => {
     return location.pathname === path ? true : "";
   };
-  function shouldSetActive({ item }: { item: SidebarItemType }): boolean {
+  function shouldSetActive({ item }: { item: SidebarMenuType }): boolean {
     var returnValue = false;
     if (item?.url === location.pathname) {
       returnValue = true;
     }
     if (!returnValue && item?.menu) {
-      item?.menu.every((subItem: SidebarItemType) => {
+      item?.menu.every((subItem: SidebarMenuType) => {
         returnValue = shouldSetActive({ item: subItem });
         return !returnValue;
       });
@@ -44,7 +44,7 @@ export default function SidebarSubMenu({
     return returnValue;
   }
   useEffect(() => {
-    menu.forEach((item) => {
+    menu?.forEach((item) => {
       let gotValue = shouldSetActive({ item });
       if (gotValue) {
         let temp = [...activeMenu];
@@ -55,7 +55,7 @@ export default function SidebarSubMenu({
   }, []);
   return (
     <>
-      {menu.map((item, i) => (
+      {menu?.map((item, i) => (
         <LI
           key={i}
           className={`${level === 0 ? "sidebar-list" : ""} ${

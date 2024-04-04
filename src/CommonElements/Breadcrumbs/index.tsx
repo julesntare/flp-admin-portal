@@ -21,7 +21,7 @@ function Breadcrumbs(props: propsTypes) {
             <Col sm={6} className="p-0">
               <Breadcrumb>
                 <BreadcrumbItem>
-                  <Link to={`${process.env.PUBLIC_URL}/dashboard/default`}>
+                  <Link to={`${process.env.PUBLIC_URL}/dashboard`}>
                     <SvgIcon className='stroke-icon' iconId='stroke-home'/>
                   </Link>
                 </BreadcrumbItem>

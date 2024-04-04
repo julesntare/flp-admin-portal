@@ -16,7 +16,7 @@ export default function LogoWrapper() {
 
   return (
     <div className="logo-wrapper">
-      <Link to={`${process.env.PUBLIC_URL}/dashboard/default`}>
+      <Link to={`${process.env.PUBLIC_URL}/dashboard`}>
         <Image
           className="img-fluid"
           src={dynamicImage(`logo/logo.png`)}

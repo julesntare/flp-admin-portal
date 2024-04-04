@@ -1,14 +1,20 @@
-import React from "react";
-import { Fragment, useState } from "react";
-import { H6, LI, UL } from "../../AbstractElements";
+import { useState } from "react";
+import { LI, UL } from "../../AbstractElements";
 import { menuList } from "../../Data/SidebarMenuList";
-import SidebarSubMenu from "./SidebarSubMenu";
 import BackButton from "./BackButton";
 import { useTranslation } from "react-i18next";
+import { Link, useLocation } from "react-router-dom";
+import { Href } from "../../Utils/Constants";
 
 export default function SidebarNav() {
   const [activeMenu, setActiveMenu] = useState([]);
   const { t } = useTranslation();
+  const location = useLocation();
+
+  const ActiveNavLinkUrl = (path?: string) => {
+    return location.pathname === path ? true : "";
+  };
+
   return (
     <UL className="sidebar-links simple-list custom-scrollbar" id="simple-bar">
       <div className="simplebar-wrapper">
@@ -18,20 +24,46 @@ export default function SidebarNav() {
               <div className="simplebar-content">
                 <BackButton />
                 {menuList &&
-                  menuList.map((mainMenu, i) => (
-                    <Fragment key={i}>
-                      <LI className={"sidebar-main-title"}>
-                        <div>
-                          <H6 className="lan-1">{t(`${mainMenu.title}`)}</H6>
-                        </div>
-                      </LI>
-                      <SidebarSubMenu
-                        menu={mainMenu.menu}
-                        activeMenu={activeMenu}
-                        setActiveMenu={setActiveMenu}
-                        level={0}
-                      />
-                    </Fragment>
+                  menuList.map((item, i) => (
+                    <LI
+                      key={i}
+                      className={
+                        (
+                          item.menu
+                            ? item.menu
+                                .map((innerItem) =>
+                                  ActiveNavLinkUrl(innerItem.url)
+                                )
+                                .includes(true)
+                            : ActiveNavLinkUrl(item.url)
+                        )
+                          ? "active"
+                          : ""
+                      }
+                    >
+                      <Link
+                        className={
+                          (
+                            item.menu
+                              ? item.menu
+                                  .map((innerItem) =>
+                                    ActiveNavLinkUrl(innerItem.url)
+                                  )
+                                  .includes(true)
+                              : ActiveNavLinkUrl(item.url)
+                          )
+                            ? "active"
+                            : ""
+                        }
+                        to={item.url ? item.url : Href}
+                        onClick={() => {
+                          const temp = activeMenu;
+                          setActiveMenu([...temp]);
+                        }}
+                      >
+                        {t(`${item.title}`)}
+                      </Link>
+                    </LI>
                   ))}
               </div>
             </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookMarkContainerPropsType, SidebarItemType } from '../../../../Types/LayoutTypes'
+import { BookMarkContainerPropsType, SidebarMenuType } from '../../../../Types/LayoutTypes'
 import { H6, LI, UL } from '../../../../AbstractElements';
 import { Back, Bookmark, Href } from '../../../../Utils/Constants';
 import BookmarkList from './BookmarkList';
@@ -34,7 +34,7 @@ export default function BookmarkContainer({ handleBookmark, bookmarkList, bookma
                                     <div className="bookmark-dropdown flip-back-content">
                                         <Input type="text" placeholder="search..." onChange={handleSearch} />
                                         <div className={bookmarkItems.length > 0 ? "Typeahead-menu filled-bookmark custom-scrollbar is-open" : ''}>
-                                            {bookmarkItems.map((data: SidebarItemType, index: number) => (
+                                            {bookmarkItems.map((data: SidebarMenuType, index: number) => (
                                                 <div className="ProfileCard u-cf" key={index}>
                                                     <div className="ProfileCard-details">
                                                         <div className="ProfileCard-realName d-flex">

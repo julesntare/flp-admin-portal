@@ -17,7 +17,7 @@ export default function HeaderLogo() {
     return (
         <Col xs='auto' className="header-logo-wrapper p-0">
             <div className="logo-wrapper">
-                <Link to={`${process.env.PUBLIC_URL}/dashboard/default`}>
+                <Link to={`${process.env.PUBLIC_URL}/dashboard`}>
                     <Image className="img-fluid for-light" src={dynamicImage(`logo/logo.png`)} alt="" />
                     <Image className="img-fluid for-dark" src={dynamicImage(`logo/logo.png`)} alt="" />
                 </Link>

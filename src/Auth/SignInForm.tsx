@@ -18,7 +18,7 @@ export default function SignInForm() {
         e.preventDefault()
         if (email === "test123@gmail.com" && password === "Test@123") {
             toast.success("Login Success...!");
-            navigate(`${process.env.PUBLIC_URL}/dashboard/default`);
+            navigate(`${process.env.PUBLIC_URL}/dashboard`);
             localStorage.setItem("login", JSON.stringify(true));
         } else {
             toast.error("Please Enter valid email or password...!");
@@ -27,7 +27,7 @@ export default function SignInForm() {
     return (
         <div>
             <div>
-                <Link className='logo' to={`${process.env.PUBLIC_URL}/dashboard/default`}>
+                <Link className='logo' to={`${process.env.PUBLIC_URL}/dashboard`}>
                     <Image className="img-fluid for-light" src={dynamicImage(`logo/logo.png`)} alt="looginpage" body={true} />
                 </Link>
             </div>

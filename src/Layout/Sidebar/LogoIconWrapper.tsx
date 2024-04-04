@@ -6,7 +6,7 @@ import { dynamicImage } from "../../Utils";
 export default function LogoIconWrapper() {
   return (
     <div className="logo-icon-wrapper">
-      <Link to={`${process.env.PUBLIC_URL}/dashboard/default`}>
+      <Link to={`${process.env.PUBLIC_URL}/dashboard`}>
         <Image
           className="img-fluid"
           src={dynamicImage(`logo/logo-icon.png`)}

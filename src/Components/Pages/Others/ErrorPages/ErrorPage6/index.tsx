@@ -16,7 +16,7 @@ export default function ErrorPage6() {
                     <Col md={8} className="offset-md-2">
                         <H3>{'Page Not Found'}</H3>
                         <P className="sub-content">{'The page you are attempting to reach is currently not available. This may be because the page does not exist or has been moved.'}</P>
-                        <Link to={`${process.env.PUBLIC_URL}/dashboard/default`}>
+                        <Link to={`${process.env.PUBLIC_URL}/dashboard`}>
                             <Btn size="lg" color="primary">{BackToHomePage}</Btn>
                         </Link>
                     </Col>

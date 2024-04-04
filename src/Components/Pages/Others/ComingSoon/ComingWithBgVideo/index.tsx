@@ -15,7 +15,7 @@ export default function ComingWithBgVideo() {
                         <source src={process.env.PUBLIC_URL + '/assets/video/auth-bg.mp4'} type="video/mp4" />
                     </video>
                     <div className="comingsoon-inner text-center">
-                        <Link to={`${process.env.PUBLIC_URL}/dashboard/default`}>
+                        <Link to={`${process.env.PUBLIC_URL}/dashboard`}>
                             <Image className="img-fluid" src={dynamicImage(`logo/logo.png`)} alt=""/>
                         </Link>
                         <H5>{WeAreComingSoon}</H5>

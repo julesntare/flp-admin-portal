@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../../../redux-toolkit/store';
 import { setBookMarkClass } from '../../../../redux-toolkit/reducers/LayoutReducer';
 import SvgIcon from '../../../../Utils/CommonComponents/CommonIcons/CommonSvgIcons';
-import { BookmarkListProps, SidebarItemType } from '../../../../Types/LayoutTypes';
+import { BookmarkListProps, SidebarMenuType } from '../../../../Types/LayoutTypes';
 
 export default function BookmarkList({ bookmarkList }: BookmarkListProps) {
   const dispatch = useDispatch();
@@ -21,7 +21,7 @@ export default function BookmarkList({ bookmarkList }: BookmarkListProps) {
     <UL className="bookmark-dropdown simple-list">
       <LI>
         <Row>
-          {bookmarkList.map((data: SidebarItemType, index: number) => (
+          {bookmarkList.map((data: SidebarMenuType, index: number) => (
             <Col xs={4} className="text-center" key={index}>
               <div className="bookmark-content">
                 <div className="bookmark-icon">

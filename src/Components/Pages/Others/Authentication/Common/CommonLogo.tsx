@@ -8,7 +8,7 @@ export default function CommonLogo({ logoClass }: LoginFormProp) {
   return (
     <Link
       className={`logo ${logoClass}`}
-      to={`${process.env.PUBLIC_URL}/dashboard/default`}
+      to={`${process.env.PUBLIC_URL}/dashboard`}
     >
       <Image
         className="img-fluid for-light"

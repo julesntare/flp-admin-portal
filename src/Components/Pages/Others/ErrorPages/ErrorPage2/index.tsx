@@ -15,7 +15,7 @@ export default function ErrorPage2() {
                 <Col md={8} className="offset-md-2 mt-3">
                     <H3>{'Oops! This Page is Not Found.'}</H3>
                     <P className="sub-content">{'The page you are attempting to reach is currently not available. This may be because the page does not exist or has been moved.'}</P>
-                    <Link to={`${process.env.PUBLIC_URL}/dashboard/default`}>
+                    <Link to={`${process.env.PUBLIC_URL}/dashboard`}>
                         <Btn size="lg" color="primary">{BackToHomePage}</Btn>
                     </Link>
                 </Col>

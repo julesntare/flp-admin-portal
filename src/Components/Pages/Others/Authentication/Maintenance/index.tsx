@@ -17,7 +17,7 @@ export default function Maintenance() {
           <H2 className="headline">{MAINTENANCE}</H2>
         </div>
         <H4 className="sub-content">{SubContent}<br/>{ThankYouPatience}</H4>
-        <Link to={`${process.env.PUBLIC_URL}/dashboard/default`}>
+        <Link to={`${process.env.PUBLIC_URL}/dashboard`}>
             <Btn color='primary-gradien' size='lg' className="text-light">{BackToHomePage}</Btn>
         </Link>
       </Container>
