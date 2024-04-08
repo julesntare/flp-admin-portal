@@ -119,6 +119,8 @@ import DefaultStyle from "../Pages/Buttons/DefaultStyle";
 import ButtonGroup from "../Pages/Buttons/ButtonGroup";
 import ApexChart from "../Pages/Charts/ApexChart";
 import DashboardPage from "../Pages/Dashboards";
+import SiteContentsPage from "../Pages/SiteContents";
+import SlidesPage from '../Pages/Slides/index';
 
 export const routes = [
   {
@@ -226,6 +228,14 @@ export const routes = [
     element: <Chart />,
   },
   { path: `${process.env.PUBLIC_URL}/dashboard`, element: <DashboardPage /> },
+  {
+    path: `${process.env.PUBLIC_URL}/site-contents`,
+    element: <SiteContentsPage />,
+  },
+  {
+    path: `${process.env.PUBLIC_URL}/slides`,
+    element: <SlidesPage />,
+  },
   {
     path: `${process.env.PUBLIC_URL}/miscellaneous/editors/ck-editor`,
     element: <CkEditor />,

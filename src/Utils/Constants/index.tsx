@@ -1,5 +1,5 @@
 export const Href: string = "#Javascript";
-export const FooterText: string = 'Copyright 2023';
+export const FooterText: string = 'Copyright 2024';
 export const Pinned:  string = 'Pinned';
 export const Emptysearch: string = "Opps!! There are no result found.";
 export const Notitications: string = "Notitications";
@@ -640,6 +640,12 @@ export const NewCustomersTitle: string = "New Customers";
 export const SpecialDiscount: string = "Special Discount";
 export const DealOfTheDay: string = "Deal of the  Day From";
 
+// site content
+export const SiteContentTitle: string = "Site Content";
+
+// Slides
+export const SlidesTitle: string = "Slides";
+
 //Widgets
 //General
 export const WidgetsTitle: string = "Widgets";
@@ -747,6 +753,8 @@ export const UploadYourFiles: string = "Upload Your Files";
 export const UploadCoverLetter: string = "Upload Cover Letter";
 export const UploadYourCV: string = "Upload Your CV";
 export const UploadRecommendations: string = "Upload Recommendations";
+export const UploadBackgroundImage: string = "Upload Background Image";
+export const UploadSlides: string = "Upload Slides";
 
 //Maps
 export const MapsTitle:string = "Maps";
@@ -835,6 +843,7 @@ export const Discard: string = "Discard";
 export const Type: string = "Type";
 export const Category: string = "Category";
 export const Content: string = "Content";
+
 
 //pages
 export const WeAreComingSoon: string = "WE ARE COMING SOON";
@@ -1609,6 +1618,7 @@ export const MyBookmark: string = "My bookmark";
 export const Favourites: string = "Favourites";
 export const Important: string = "Important";
 export const Organization: string = "Organization";
+export const FindMoreLink: string = "Find More Link";
 
 //Contacts
 export const ContactsTitle: string = "Contacts";
